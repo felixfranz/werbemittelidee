@@ -1,0 +1,79 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+*********************/
+
+$black:             #222;
+$white:             #fff;
+
+$bones-pink:        #f01d4f;
+
+$disabled-gray:     #cfcfcf;
+
+
+
+$ease: cubic-bezier(.12,.845,.305,1);
+
+html{
+	
+	--main-color: #00a5d6;
+	--secondary-color: #273582;
+	--black: #111;
+	--text-gray: #999;
+
+	--text-size: 1rem;
+
+		--very-small-text: 0.8em;
+		--small-text: 0.85em;
+		--size-medium: 21px;
+		--size-big: clamp(1.5rem, 1vw + 2.75rem, 3.138rem);
+		--size-big: 46px;
+		--size-biggest: clamp(1.5rem, 0.84rem + 5.78vw, 3.438rem);
+
+
+
+	--ratio-square: 1;
+	--ratio-landscape: 4/3;
+	--ratio-portrait: 3/4;
+	--ratio-widescreen: 16/9;
+	--ratio-ultrawide: 18/5;
+	--ratio-golden: 1.6180/1;
+
+	--gray-0: #f8f9fa;
+	--gray-1: #f1f3f5;
+	--gray-2: #e9ecef;
+	--gray-3: #dee2e6;
+	--gray-4: #ced4da;
+	--gray-5: #adb5bd;
+	--gray-6: #868e96;
+	--gray-7: #495057;
+	--gray-8: #343a40;
+	--gray-9: #212529;
+
+--flow-step-0: 5px;
+	--flow-step-1: 8px;
+	--flow-step-2: calc(var(--flow-step-0) + var(--flow-step-1)); //13
+	--flow-step-3: calc(var(--flow-step-1) + var(--flow-step-2)); // 21
+	--flow-step-4: calc(var(--flow-step-2) + var(--flow-step-3)); // 34
+	--flow-step-5: calc(var(--flow-step-3) + var(--flow-step-4)); // 55 
+	--flow-step-6: calc(var(--flow-step-4) + var(--flow-step-5)); // 89
+	--flow-step-7: calc(var(--flow-step-5) + var(--flow-step-6)); // 144
+
+
+	--blue-gradient: linear-gradient(180deg, #2a82c5, #2680c4, #227ec3, #1d7cc2, #187bc2, #1279c1, #0977c0, #0075bf);
+	--dark-blue-gradient: linear-gradient(180deg, #19455b, #164258, #123f56, #0e3c53, #0b3951, #07364e, #03334c, #003049);
+
+}
+

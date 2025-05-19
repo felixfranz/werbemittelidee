@@ -1,0 +1,313 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	//width: 100%;
+	//max-width: 760px;
+}
+
+
+h1, .h1 {
+	font-size: var(--size-big);
+	line-height: 1.333em;
+	font-weight: 800;
+}
+
+h2, .h2 {
+	//font-size: 3.6em;
+	line-height: 1.4em;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+
+#header {
+	
+	*{ @include transition(all 0.2s ease-in-out); }
+
+
+	
+	#inner-header{
+		justify-content: space-between;
+
+		&::before, &::after{
+			display: none;
+		}
+
+		#logo {
+			margin:  0;
+			width: 20%;
+			display: flex;
+			align-items: center;
+
+			a {	
+				width: 100%;
+				max-width: 300px;
+				height: 50px;
+				&:hover{
+					opacity: 0.85;
+				}
+			}
+		}
+	}
+}
+
+.home #header{
+		-webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+		animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-top {
+	0% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-in-top {
+	0% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav_container_mobile, .nav_toggle{
+	display: none;
+}
+
+.nav_container_desktop{
+	display: inline-block;
+}
+
+
+.nav {
+	border: 0;
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	&:after, &:before{
+		 display: none;  // remove from flex alignment! 
+	}
+
+	li {
+	
+		&>a {
+			// background: red;
+			display: block;
+			border-bottom: 1px solid transparent;
+			margin: 0 10px;
+			padding:12px 0 12px;
+			text-decoration: none;
+			font-size: 13px;
+			font-weight: 600;
+			text-transform: uppercase;
+			position: relative;
+			color: white;
+
+			&::after{
+				content: '';
+				display: inline-block;
+				width: 0%;
+				height: 1px;
+
+				position: absolute;
+				bottom:0;
+				left: 50%;
+				transform: translateX(-50%);
+				@include transition(all 0.1s cubic-bezier(.12,.845,.305,1));
+			}
+
+			&:hover, &:focus {
+				color: var(--main-color);
+				text-decoration: none;
+
+				&::after{
+					width: 100%;
+				}
+			}
+		}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			margin-top: -1px;
+			border-top: 0;
+			position: absolute;
+			display: none;
+			z-index: 2;
+			min-width: 200px;
+
+
+			background: $white;
+
+			li {
+				text-align: left;
+				a {
+					padding: 12px 10px;
+					border-right: 0;
+					display: block;
+					//width: 180px;
+					margin: 0;
+					border-bottom: 1px solid #ccc;
+
+					&::after{
+						display: none;
+					}
+
+					&:hover,
+					&:focus {
+						background: var(--main-color);
+						color: white;
+					}
+				}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			display: block;
+			//visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {
+		
+		}
+	}  /* end current highlighters */
+} /* end .nav */
+
+
+/*********************
+GLOBAL COMPOSER STYLES
+*********************/
+
+
+.vc_section {
+	padding-top: var(--flow-step-6);
+	padding-bottom: var(--flow-step-6);
+	margin-right: 15px;
+	//padding-right: 15px;
+}
+
+.vc_row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.vc_col-sm-6+.vc_col-sm-6 {
+	margin-top: 0;
+}
+
+/*********************
+CONTENT
+*********************/
+
+.entry-content{
+	width: 80%;
+	margin: 0 auto;
+	.aside{
+		font-size: 1.3em;
+		color: var(--text-gray);
+	}
+}
+
+.wp-block-columns{
+	margin: 60px 0;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 2.2em;
+}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			ul {}
+		}
+	}
+} /* end .footer-links */
+

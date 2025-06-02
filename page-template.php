@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Page Template
+ Template Name: Product Galleries
  *
 */
 ?>
@@ -17,53 +17,71 @@
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> >
 
-								<header class="article-header">
-
-									<h1 class="page-title"><?php the_title(); ?></h1>
-
-									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
-
-								</header>
 
 								<section class="entry-content cf" >
 									<?php
+									the_content();
 										
-										the_content();
+										// Check value exists.
+										if( have_rows('galleries') ):
+											echo '<section class="vc_section gallery-section">';
+											// Loop through rows.
+											while ( have_rows('galleries') ) : the_row();
 
+												// Case: Paragraph layout.
+												if( get_row_layout() == 'product_gallery_container' ):
+													$gallery_headline = get_sub_field('gallery_headline');
+													// Do something...
+
+													echo '<h2>'.$gallery_headline."</h2>";
+
+													
+													$images = get_sub_field('product_gallery');
+													if( $images ): ?>
+														
+														
+														<ul class="image-gallery">
+															<?php foreach( $images as $image ): 
+																$content = '<li>';
+																	$content .= '<a class="gallery_image" href="'. $image['url'] .'">';
+																			$content .= '<img src="'. $image['sizes']['thumbnail'] .'" alt="'. $image['alt'] .'" />';
+																	$content .= '</a>';
+																$content .= '</li>';
+																if ( function_exists('slb_activate') ){
+														$content = slb_activate($content);
+														}
+
+														echo $content;?>
+															<?php endforeach; ?>
+														</ul>
+													<?php endif; 
+
+												endif;
+
+											// End loop.
+											endwhile;
+											echo '</section>';
+										// No value.
+										else :
+											// Do something...
+										endif;
 									?>
 								</section>
 
 
-								<footer class="article-footer">
 
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer>
 
 							</article>
 
 							<?php endwhile; else : ?>
 
-									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
+
 
 							<?php endif; ?>
 
 						</main>
 
-						<?php get_sidebar(); ?>
+			
 
 				</div>
 

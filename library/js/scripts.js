@@ -54,8 +54,16 @@ nav_toggle.click(function(){
 
   toggle_menu();
 
+    $(".nav_container_mobile li").each(function (i) {
+        var div = $(this);
+        setTimeout(function () {
+            div.toggleClass("animate_menu");
+        }, i * 40);
+    });
+
   return false;
 });
+
 
 
 $(function(){

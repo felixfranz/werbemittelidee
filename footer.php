@@ -1,6 +1,6 @@
 <section id="contact" class="fullwidth_section banner_section">
 	<div class="cta_banner cta_banner_black">
-		<div class="cta_banner_inner">
+		<div class="cta_banner_inner wrap">
 			<h2>Jetzt Kontakt aufnehmen</h2> 
 			<p>Haben Sie ein aktuelles Projekt oder einen konkreten Bedarf an Werbemitteln?
 Benötigen Sie eine Beratung oder ein Angebot?
@@ -15,7 +15,7 @@ Wir freuen uns über jede Ihre Anfragen.  </p>
 </section>
 <section id="shop-link" class="fullwidth_section banner_section">
 	<div class="cta_banner cta_banner_dark-blue">
-		<div class="cta_banner_inner">
+		<div class="cta_banner_inner wrap">
 			<div class="image_wrapper banner_logo"></div>
 			<h2>Direkt zu unserem Shop</h2> 
 

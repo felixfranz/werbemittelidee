@@ -1,1 +1,565 @@
-html{--main-color: #00a5d6;--secondary-color: #273582;--black: #111;--text-gray: #999;--text-size: 1rem;--very-small-text: 0.8em;--small-text: 0.85em;--size-medium: 21px;--size-big: clamp(1.5rem, 1vw + 2.75rem, 3.138rem);--size-big: 46px;--size-biggest: clamp(1.5rem, 0.84rem + 5.78vw, 3.438rem);--ratio-square: 1;--ratio-landscape: 4/3;--ratio-portrait: 3/4;--ratio-widescreen: 16/9;--ratio-ultrawide: 18/5;--ratio-golden: 1.6180/1;--gray-0: #f8f9fa;--gray-1: #f1f3f5;--gray-2: #e9ecef;--gray-3: #dee2e6;--gray-4: #ced4da;--gray-5: #adb5bd;--gray-6: #868e96;--gray-7: #495057;--gray-8: #343a40;--gray-9: #212529;--flow-step-0: 5px;--flow-step-1: 8px;--flow-step-2: calc(var(--flow-step-0) + var(--flow-step-1));--flow-step-3: calc(var(--flow-step-1) + var(--flow-step-2));--flow-step-4: calc(var(--flow-step-2) + var(--flow-step-3));--flow-step-5: calc(var(--flow-step-3) + var(--flow-step-4));--flow-step-6: calc(var(--flow-step-4) + var(--flow-step-5));--flow-step-7: calc(var(--flow-step-5) + var(--flow-step-6));--blue-gradient: linear-gradient(180deg, #2a82c5, #2680c4, #227ec3, #1d7cc2, #187bc2, #1279c1, #0977c0, #0075bf);--dark-blue-gradient: linear-gradient(180deg, #19455b, #164258, #123f56, #0e3c53, #0b3951, #07364e, #03334c, #003049)}@font-face{font-family:'Supreme';src:url("../fonts/Supreme-Variable.woff2") format("woff2"),url("../fonts/Supreme-Variable.woff") format("woff"),url("../fonts/Supreme-Variable.ttf") format("truetype");font-weight:100 800;font-display:swap;font-style:normal}@font-face{font-family:'Supreme-VariableItalic';src:url("../fonts/Supreme-VariableItalic.woff2") format("woff2"),url("../fonts/Supreme-VariableItalic.woff") format("woff"),url("../fonts/Supreme-VariableItalic.ttf") format("truetype");font-weight:100 800;font-display:swap;font-style:italic}p{-webkit-font-feature-settings:"liga", "dlig";-moz-font-feature-settings:"liga=1, dlig=1";-ms-font-feature-settings:"liga", "dlig";-o-font-feature-settings:"liga", "dlig";font-feature-settings:"liga", "dlig"}#content .vc_btn3-container{width:auto}#content .vc_btn3-container .vc_btn3{width:auto}.entry-content .alignleft,.entry-content img.alignleft{margin-right:1.5em;display:inline;float:left}.entry-content .alignright,.entry-content img.alignright{margin-left:1.5em;display:inline;float:right}.entry-content .aligncenter,.entry-content img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both}h1,.h1{font-size:var(--size-big);line-height:1.333em;font-weight:800}h2,.h2{line-height:1.4em}#header *{-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out}#header #inner-header{justify-content:space-between}#header #inner-header::before,#header #inner-header::after{display:none}#header #inner-header #logo{margin:0;width:20%;display:flex;align-items:center}#header #inner-header #logo a{width:100%;max-width:300px;height:50px}#header #inner-header #logo a:hover{opacity:0.85}.home #header{-webkit-animation:slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;animation:slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both}@-webkit-keyframes slide-in-top{0%{-webkit-transform:translateY(-100%);transform:translateY(-100%);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-top{0%{-webkit-transform:translateY(-100%);transform:translateY(-100%);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}.nav_container_mobile,.nav_toggle{display:none}.nav_container_desktop{display:inline-block}.nav{border:0;display:flex;justify-content:flex-end;margin:0}.nav:after,.nav:before{display:none}.nav li>a{display:block;border-bottom:1px solid transparent;margin:0 10px;padding:12px 0 12px;text-decoration:none;font-size:13px;font-weight:600;text-transform:uppercase;position:relative;color:white}.nav li>a::after{content:'';display:inline-block;width:0%;height:1px;position:absolute;bottom:0;left:50%;transform:translateX(-50%);-webkit-transition:all 0.1s cubic-bezier(0.12, 0.845, 0.305, 1);transition:all 0.1s cubic-bezier(0.12, 0.845, 0.305, 1)}.nav li>a:hover,.nav li>a:focus{color:var(--main-color);text-decoration:none}.nav li>a:hover::after,.nav li>a:focus::after{width:100%}.nav li ul.sub-menu,.nav li ul.children{margin-top:-1px;border-top:0;position:absolute;display:none;z-index:2;min-width:200px;background:#fff}.nav li ul.sub-menu li,.nav li ul.children li{text-align:left}.nav li ul.sub-menu li a,.nav li ul.children li a{padding:12px 10px;border-right:0;display:block;margin:0;border-bottom:1px solid #ccc}.nav li ul.sub-menu li a::after,.nav li ul.children li a::after{display:none}.nav li ul.sub-menu li a:hover,.nav li ul.sub-menu li a:focus,.nav li ul.children li a:hover,.nav li ul.children li a:focus{background:var(--main-color);color:white}.nav li ul.sub-menu li:last-child a,.nav li ul.children li:last-child a{border-bottom:0}.nav li:hover>ul{display:block}.vc_section{padding-top:var(--flow-step-6);padding-bottom:var(--flow-step-6);margin-right:15px}.vc_row{margin-left:-15px;margin-right:-15px}.vc_col-sm-6+.vc_col-sm-6{margin-top:0}.entry-content{width:80%;margin:0 auto}.entry-content .aside{font-size:1.3em;color:var(--text-gray)}.wp-block-columns{margin:60px 0}.sidebar{margin-top:2.2em}.wrap{max-width:1030px}.nav li>a{font-size:15px}.grid-container{grid-template-columns:repeat(4, 1fr)}
+@charset "UTF-8";
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+*********************/
+html {
+  --main-color: #00a5d6;
+  --secondary-color: #273582;
+  --black: #111;
+  --text-gray: #999;
+  --text-size: 1rem;
+  --very-small-text: 0.8em;
+  --small-text: 0.85em;
+  --size-medium-var: clamp(1.5rem, 1vw + 1.5rem, 2.138rem);
+  --size-big: clamp(1.5rem, 1vw + 2.75rem, 3.138rem);
+  --size-biggest: clamp(1.5rem, 0.84rem + 5.78vw, 3.438rem);
+  --ease: cubic-bezier(.12, .845, .305, 1);
+  --ratio-square: 1;
+  --ratio-landscape: 4/3;
+  --ratio-portrait: 3/4;
+  --ratio-widescreen: 16/9;
+  --ratio-ultrawide: 18/5;
+  --ratio-golden: 1.6180/1;
+  --gray-0: #f8f9fa;
+  --gray-1: #f1f3f5;
+  --gray-2: #e9ecef;
+  --gray-3: #dee2e6;
+  --gray-4: #ced4da;
+  --gray-5: #adb5bd;
+  --gray-6: #868e96;
+  --gray-7: #495057;
+  --gray-8: #343a40;
+  --gray-9: #212529;
+  --flow-step-0: 5px;
+  --flow-step-1: 8px;
+  --flow-step-2: calc(var(--flow-step-0) + var(--flow-step-1));
+  --flow-step-3: calc(var(--flow-step-1) + var(--flow-step-2));
+  --flow-step-4: calc(var(--flow-step-2) + var(--flow-step-3));
+  --flow-step-5: calc(var(--flow-step-3) + var(--flow-step-4));
+  --flow-step-6: calc(var(--flow-step-4) + var(--flow-step-5));
+  --flow-step-7: calc(var(--flow-step-5) + var(--flow-step-6));
+  --blue-gradient: linear-gradient(180deg, #2a82c5, #2680c4, #227ec3, #1d7cc2, #187bc2, #1279c1, #0977c0, #0075bf);
+  --dark-blue-gradient: linear-gradient(180deg, #19455b, #164258, #123f56, #0e3c53, #0b3951, #07364e, #03334c, #003049);
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+@font-face {
+  font-family: "Supreme";
+  src: url("../fonts/Supreme-Variable.woff2") format("woff2"), url("../fonts/Supreme-Variable.woff") format("woff"), url("../fonts/Supreme-Variable.ttf") format("truetype");
+  font-weight: 100 800;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 800.0;
+*
+* available axes:
+
+* 'wght' (range from 100.0 to 800.0)
+
+*/
+@font-face {
+  font-family: "Supreme-VariableItalic";
+  src: url("../fonts/Supreme-VariableItalic.woff2") format("woff2"), url("../fonts/Supreme-VariableItalic.woff") format("woff"), url("../fonts/Supreme-VariableItalic.ttf") format("truetype");
+  font-weight: 100 800;
+  font-display: swap;
+  font-style: italic;
+}
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Grid Styles
+
+Since the example grid is based on media queries, so rather than
+setup some js library that would make IE8 and below understand
+media queries, let's just add some styles that serves a fixed grid.
+
+Again, if you want to roll your own, just remove this junk and put
+whatever you use in here.
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
+/*********************
+NAVIGATION STYLES
+*********************/
+/*********************
+BUTTON FÜR MOBILE ANPASSUNGEN
+*********************/
+#content .vc_btn3-container {
+  width: auto;
+}
+#content .vc_btn3-container .vc_btn3 {
+  width: auto;
+}
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+.entry-content {
+  /* at this larger size, we can start to align images */
+}
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+/* end .entry-content */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+html {
+  --size-big: 36px;
+  --size-medium: 21px;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+h1, .h1 {
+  font-size: var(--size-big);
+  line-height: 1.333em;
+  font-weight: 800;
+}
+
+h2, .h2 {
+  line-height: 1.4em;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+#header * {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#header #inner-header {
+  justify-content: space-between;
+}
+#header #inner-header::before, #header #inner-header::after {
+  display: none;
+}
+#header #inner-header #logo {
+  margin: 0;
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+#header #inner-header #logo a {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+}
+#header #inner-header #logo a:hover {
+  opacity: 0.85;
+}
+
+.home #header {
+  -webkit-animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+  animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav_container_mobile, .nav_toggle {
+  display: none;
+}
+
+.nav_container_desktop {
+  display: inline-block;
+}
+
+.nav {
+  border: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.nav:after, .nav:before {
+  display: none;
+}
+.nav li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+.nav li > a {
+  display: block;
+  border-bottom: 1px solid transparent;
+  margin: 0 10px;
+  padding: 12px 0 12px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+}
+.nav li > a::after {
+  content: "";
+  display: inline-block;
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transition: all 0.1s cubic-bezier(0.12, 0.845, 0.305, 1);
+  transition: all 0.1s cubic-bezier(0.12, 0.845, 0.305, 1);
+}
+.nav li > a:hover, .nav li > a:focus {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.nav li > a:hover::after, .nav li > a:focus::after {
+  width: 100%;
+}
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: -1px;
+  border-top: 0;
+  position: absolute;
+  display: none;
+  z-index: 2;
+  min-width: 200px;
+  background: #fff;
+  /* highlight sub-menu current page */
+}
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  text-align: left;
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding: 12px 10px;
+  border-right: 0;
+  display: block;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+.nav li ul.sub-menu li a::after,
+.nav li ul.children li a::after {
+  display: none;
+}
+.nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
+.nav li ul.children li a:hover,
+.nav li ul.children li a:focus {
+  background: var(--main-color);
+  color: white;
+}
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+.nav li:hover > ul {
+  display: block;
+}
+/* end .nav */
+/*********************
+GLOBAL COMPOSER STYLES
+*********************/
+.vc_section {
+  padding-top: var(--flow-step-6);
+  padding-bottom: var(--flow-step-6);
+  margin-right: 15px;
+}
+
+.vc_row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.vc_col-sm-6 + .vc_col-sm-6 {
+  margin-top: 0;
+}
+
+/*********************
+CONTENT
+*********************/
+.entry-content {
+  width: 80%;
+  margin: 0 auto;
+}
+.entry-content .aside {
+  font-size: 1.3em;
+  color: var(--text-gray);
+}
+
+.wp-block-columns {
+  margin: 60px 0;
+}
+
+ul.image-gallery {
+  --numcolumns: 3;
+  --gap: 10px;
+}
+
+/*********************
+CTA BLOCK	
+*********************/
+.wmi_cta {
+  height: 385px;
+}
+
+.wmi_cta.cta_with_image {
+  height: 385px;
+}
+.wmi_cta.cta_with_image a div {
+  width: 50%;
+}
+.wmi_cta.cta_with_image a .cta_image_container {
+  position: relative;
+  height: 100%;
+}
+.wmi_cta.cta_with_image.image_left a .type_container {
+  order: 2;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+/* end .footer-links */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+.wrap {
+  max-width: 1030px;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav li > a {
+  font-size: 15px;
+}
+
+/*********************
+GRID
+*********************/
+ul.image-gallery {
+  --numcolumns: 4;
+  --gap: 10px;
+}
+
+/*
+you can call the larger styles if you want, but there's really no need
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*//*# sourceMappingURL=ie.css.map */

@@ -16,7 +16,10 @@ come into play. Have fun!
 /*********************
 GENERAL STYLES
 *********************/
-
+html{
+	--size-big: 36px;
+	--size-medium: 21px;
+}
 body {
 
 }
@@ -286,14 +289,53 @@ CONTENT
 	margin: 60px 0;
 }
 
-/*********************
-SIDEBARS & ASIDES
-*********************/
+// GALLERIES
 
-.sidebar {
-	margin-top: 2.2em;
+ul.image-gallery {
+	--numcolumns: 3;
+	--gap: 10px;
 }
 
+/*********************
+CTA BLOCK	
+*********************/
+
+.wmi_cta {
+	
+
+	height: 385px;
+
+
+}
+
+.wmi_cta.cta_with_image {
+height: 385px;
+	a {
+
+
+		div {
+			width: 50%;
+		}
+
+		.cta_image_container {
+			position: relative;
+			height: 100%;
+	
+		}
+
+	}
+
+	&.image_left {
+		a {
+			.type_container {
+				order: 2;
+			}
+
+		}
+
+	}
+
+}
 
 /*********************
 FOOTER STYLES

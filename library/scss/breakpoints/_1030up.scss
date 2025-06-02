@@ -9,6 +9,8 @@ be seen on the Desktop.
 
 ******************************************************************/
 
+
+
 .wrap {
   max-width: 1030px;
 }
@@ -32,6 +34,9 @@ NAVIGATION STYLES
 GRID
 *********************/
 
-.grid-container{
-    grid-template-columns: repeat(4, 1fr);
+// GALLERIES
+
+ul.image-gallery {
+	--numcolumns: 4;
+	--gap: 10px;
 }

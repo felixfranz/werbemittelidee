@@ -16,6 +16,8 @@ GENERAL STYLES
 *********************/
 html{
 	overflow-x: hidden; /* magic... */
+	--size-big: 30px;
+	--size-medium: 21px;
 }
 body {
 	font-family: $sans;
@@ -80,7 +82,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: var(--size-big);
 	line-height: 1.1em;
-	font-weight: 700;
+	font-weight: 800;
 }
 
 h2, .h2 {
@@ -280,22 +282,56 @@ NAVIGATION STYLES
 	transform: translateX(100%);
 
 	nav{
-		ul{
-			li{
-				a{
-					color: $white;
-					text-decoration: none;
-
+		ul {
+				margin-top: calc(var(--bottom-row-height) * -1);
+				display: flex;
+				flex-direction: column;
+		
+				li {
+		
+					transform: translateX(100px);
+					opacity: 0;
+					@include transition(all 0.3s var(--ease));
+					text-align: center;
+		
+					a {
+						color: $white;
+						text-decoration: none;
+						font-size: 24px;
+						font-weight: 600;
+						padding: 5px 10px;
+						color: white;
+						text-transform: uppercase;
+		
+						&::after {
+							display: none;
+						}
+		
+						&:hover {
+							color: var(--main-color);
+		
+						}
+					}
+					&.animate_menu {
+						opacity: 1;
+						transform: translateX(0);
+						transition-delay: 0.3s;
+					}
+		
+					&.current-menu-item {
+						a {
+							background: var(--medium-gray);
+						}
+					}
 				}
 			}
-		}
 	}
 }
 
 .nav_toggle{
 	position: fixed;
-	width: 90px;
-	height: 90px;
+	width: 70px;
+	height: 70px;
 	display: flex;
 	z-index: 20;
 	top: 0;
@@ -586,6 +622,68 @@ CONTENT
 	}
 }
 
+// GALLERIES
+
+ul.image-gallery {
+	--numcolumns: 2;
+	--gap: 10px;
+	display: grid;
+
+	grid-template-columns: repeat(var(--numcolumns), 1fr);
+
+	grid-template-rows: auto;
+	gap: var(--gap);
+	align-items: stretch;
+	padding-bottom: 40px;
+}
+
+.image-gallery li {
+	aspect-ratio: var(--ratio-golden);
+	overflow: hidden;
+	background: black;
+}
+
+.image-gallery li a{
+	@include transition(all 0.5s cubic-bezier(.12, .845, .305, 1));
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	aspect-ratio: var(--ratio-golden);
+	overflow: hidden;
+	&:hover{
+		opacity: 0.5;
+	}
+}
+
+ul.image-gallery>li a img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery-section{
+	h2{
+		font-size: var(--size-medium-var);
+	}
+}
+
+/*********************
+LIGHTBOX
+*********************/
+
+#slb_viewer_wrap .slb_theme_slb_default .slb_group_status{
+	font-style: normal !important;
+	color: var(--gray-6) !important;
+	font-family: $sans !important;
+	font-size: 16px  !important;
+}
+
+#slb_viewer_wrap .slb_theme_slb_default .slb_data_title,
+{
+	color: var(--black) !important;
+		font-family: $sans !important;
+}
 
 /*********************
 CTA BLOCK	
@@ -594,7 +692,7 @@ CTA BLOCK
 .wmi_cta{
 	display: flex;
 	
-	height: 385px;
+	height: 200px;
 	justify-content: center;
 	align-items: stretch;
 
@@ -605,13 +703,13 @@ CTA BLOCK
 		width: 100%;
 		color: inherit;
 		text-decoration: none;
-		background: green;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		align-content: center;
 		flex-wrap: wrap;
 		position: relative;
+		padding: 10px;
 		&::before{
 			content: '';
 			position: absolute;
@@ -627,7 +725,7 @@ CTA BLOCK
 
 		&:hover{
 			&::before{
-				opacity: 0.1;
+				opacity: 0.5;
 			}
 		}
 
@@ -640,6 +738,7 @@ CTA BLOCK
 
 		h2{
 			font-weight: 900;
+			line-height: 1.1;
 		}
 
 		
@@ -659,17 +758,30 @@ width: 100%;
 margin-top: var(--flow-step-4);
 align-items: flex-start;
 justify-content: stretch;
+overflow: hidden;
+height: auto;
+
+
 	a{
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		height: 100%;
 		width: 100%;
+		padding: 0;
+	
 		div{
-			width: 50%;
+			width: 100%;
+		}
+
+		.type_container{
+			//min-height: 100px;
+			padding: 30px 0 40px;
+
 		}
 
 		.cta_image_container{
 			position: relative;
-			height: 100%;
+			height: 350px;
+			line-height: 0;
 
 			img{
 				object-fit: cover;
@@ -710,7 +822,7 @@ justify-content: stretch;
 	&.image_left{
 		a{
 			.type_container{
-				order: 2;
+				//order: 2;
 			}
 			.cta_image_container{
 				order: 1;
@@ -929,9 +1041,9 @@ LISTE
 
 .entry-content{
 	ul{
-		list-style: disc;
+		
 		li{
-			margin-left: 20px;
+			
 		}
 	}
 }

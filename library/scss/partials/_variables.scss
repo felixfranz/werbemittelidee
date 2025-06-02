@@ -37,12 +37,14 @@ html{
 
 		--very-small-text: 0.8em;
 		--small-text: 0.85em;
-		--size-medium: 21px;
+
+		--size-medium-var: clamp(1.5rem, 1vw + 1.5rem, 2.138rem);
+		
 		--size-big: clamp(1.5rem, 1vw + 2.75rem, 3.138rem);
-		--size-big: 46px;
+		
 		--size-biggest: clamp(1.5rem, 0.84rem + 5.78vw, 3.438rem);
 
-
+--ease: cubic-bezier(.12, .845, .305, 1);
 
 	--ratio-square: 1;
 	--ratio-landscape: 4/3;
@@ -70,7 +72,6 @@ html{
 	--flow-step-5: calc(var(--flow-step-3) + var(--flow-step-4)); // 55 
 	--flow-step-6: calc(var(--flow-step-4) + var(--flow-step-5)); // 89
 	--flow-step-7: calc(var(--flow-step-5) + var(--flow-step-6)); // 144
-
 
 	--blue-gradient: linear-gradient(180deg, #2a82c5, #2680c4, #227ec3, #1d7cc2, #187bc2, #1279c1, #0977c0, #0075bf);
 	--dark-blue-gradient: linear-gradient(180deg, #19455b, #164258, #123f56, #0e3c53, #0b3951, #07364e, #03334c, #003049);
